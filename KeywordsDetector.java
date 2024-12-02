@@ -23,6 +23,7 @@ public class KeywordsDetector {
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         for(int i = 0; i < sentences.length; i++){
             String str = sentences[i];
+            str = str.toLowerCase();
             for (int j = 0; j < keywords.length; j++){
                 String bullWords = keywords[j];
                 if (str.contains(bullWords)) System.out.println(str);

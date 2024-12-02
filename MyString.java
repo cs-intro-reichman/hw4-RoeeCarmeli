@@ -34,26 +34,20 @@ public class MyString {
     public static boolean contains(String str1, String str2) {
         if (str1.length() < str2.length()) return false;
         int i = 0;
-        int j = 0;
-        
+
         while (i <= str1.length() - str2.length()) {
-            char ch1 = str1.charAt(i);
-            char ch2 = str2.charAt(j);
+            int j = 0;
+            int f = i;
             
-            if (ch1 == ch2) {
-                j = 0;
-                int f = i;
-                while (j < str2.length()) {
-                    if (f >= str1.length() || str1.charAt(f) != str2.charAt(j)) break;
-                    ch1 = str1.charAt(f);
-                    ch2 = str2.charAt(j);
-                    if (ch1 != ch2) break;
+                 while (j < str2.length()) {
+                    if (str1.charAt(f) != str2.charAt(j)) break;
                     f++;
                     j++;
-                    if (j == str2.length()) return true;
                 }
-            }
+                    
+            if (j == str2.length()) return true;
             i++;
+                
         }
         return false;
     }

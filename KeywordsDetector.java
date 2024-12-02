@@ -26,6 +26,7 @@ public class KeywordsDetector {
             str = str.toLowerCase();
             for (int j = 0; j < keywords.length; j++){
                 String bullWords = keywords[j];
+                bullWords = bullWords.toLowerCase();
                 if (str.contains(bullWords)) System.out.println(str);
             }
         }

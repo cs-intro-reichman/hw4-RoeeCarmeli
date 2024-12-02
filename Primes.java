@@ -5,21 +5,19 @@ public class Primes {
         boolean[] isPrime = new boolean[n + 1];
         System.out.println("Prime numbers up to " + n + ":");
        
-        for(int i = 2; i < n; i++) isPrime[i] = true;
+        for(int i = 2; i <= n; i++) isPrime[i] = true;
       
         while (firstNum <= Math.sqrt(n)) {
             for(int i = 2; i < n; i++){
-                if (i != firstNum) {
-                    if ( (i % firstNum == 0)) {
+                if (i != firstNum && i % firstNum == 0) {
                         isPrime[i] = false;
-                    } 
                 }
             }
             firstNum++;
         }
         
         double count = 0.0;
-        for(int i = 2; i < n; i++){
+        for(int i = 2; i <= n; i++){
             if (isPrime[i] == true){
                 System.out.println(i);
                 count++;

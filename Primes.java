@@ -18,17 +18,15 @@ public class Primes {
             firstNum++;
         }
         
-        int finalPrime = 0;
         double count = 0.0;
         for(int i = 2; i < n; i++){
             if (isPrime[i] == true){
                 System.out.println(i);
                 count++;
-                finalPrime = i;
              } 
             }
         int percent = (int) ((count / (double) n) * 100);
-        System.out.println("There are " + count + " primes between 2 and "
-        + finalPrime + " (" + percent + " are primes)");
+        System.out.println("There are " + (int) count + " primes between 2 and "
+        + n + " (" + percent + "% are primes)");
         }
 }

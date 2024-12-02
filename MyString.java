@@ -39,10 +39,12 @@ public class MyString {
         while (i <= str1.length() - str2.length()) {
             char ch1 = str1.charAt(i);
             char ch2 = str2.charAt(j);
+            
             if (ch1 == ch2) {
                 j = 0;
                 int f = i;
                 while (j < str2.length()) {
+                    if (f >= str1.length() || str1.charAt(f) != str2.charAt(j)) break;
                     ch1 = str1.charAt(f);
                     ch2 = str2.charAt(j);
                     if (ch1 != ch2) break;
